@@ -1,0 +1,32 @@
+*** Settings ***
+Library  AppiumLibrary
+
+Documentation  Video Test
+
+Force Tags  Videos
+
+*** Test Case ***
+
+Test Video Play/Pause/Expand
+
+  Open application  http://localhost:4723/wd/hub  platformName=Android  platformVersion=8.0.0  deviceName=4e5a545a44553398  app=com.vzw.indycar.ic15  automationName=appium  appPackage=com.vzw.indycar.ic15  appActivity=com.vzw.indycar.activities.LauncherActivity  noReset=true
+  #Wait Until Element Is Visible  id=com.vzw.indycar.ic15:id/wifi_notice_do_not_show_message_again_container
+  #Click Element  id=com.vzw.indycar.ic15:id/wifi_notice_continue_btn
+  #Click Element  id=com.vzw.indycar.ic15:id/action_fav_driver
+  Wait Until Element Is Visible  id=com.vzw.indycar.ic15:id/home_race_results_card_race_block  10
+  Click Element  Open
+  Page Should Contain Text  Videos
+  Click Element At Coordinates  381.5  1753.9
+  Wait Until Element Is Visible  com.vzw.indycar.ic15:id/play_icon
+  #Click Text  Latest Videos
+  #Wait Until Element Is Visible  id=com.vzw.indycar.ic15:id/common_spinner_primary_text
+   #Page Should Contain Text  Driver Blogs & Interviews
+  Click Element  com.vzw.indycar.ic15:id/play_icon
+  Wait Until Page Does Not Contain  id=com.vzw.indycar.ic15:id/video_view_play_pause_btn
+  Tap  id=com.vzw.indycar.ic15:id/video_player  456.8  620.0  2
+  #Wait Until Element Is Visible  id=com.vzw.indycar.ic15:id/video_view_play_pause_btn  1
+  Click Element At Coordinates  60.0  814.0
+  Click Element At Coordinates  1041.8  814.5
+  #Click Element At Coordinates  60.0  814.0
+  #Click Element  com.vzw.indycar.ic15:id/video_view_play_pause_btn
+  Portrait
