@@ -11,12 +11,10 @@ Documentation  Smoke Test ${Phone}
 Force Tags  Device Porting
 
 *** Variables ***
-${Phone}  Pixel3 XL
+${Phone}  J3
 ${OS}  8.1.0
-${Server}  http://localhost:4733/wd/hub
-${CategoryPhotos}  Grand Prix of Sonoma - Friday, September 14, 2018
-
-
+${Server}  http://localhost:4723/wd/hub
+${CategoryPhotos}
 
 
 *** Test Cases ***
@@ -31,63 +29,62 @@ Social Features
   Run Keyword And Ignore Error    Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.TextView[1]
   Run Keyword And Ignore Error  Wait Until Element Is Visible  id=You Retweeted
   Go Back
-  Go Back
   Wait Until Element Is Visible    com.vzw.indycar:id/tweet_item_follow_btn
-  Super Swipe
-  Super Swipe
+  Super Swipe2
+  Super Swipe2
   Wait Until Element Is Visible  id=com.vzw.indycar:id/loadMoreButton
   Click Element  id=com.vzw.indycar:id/loadMoreButton
   Sleep  2
-  Swipy1
+  Swipy2
 
-# News Features
-#
-#   Wait Until Element Is Visible  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.FrameLayout[3]
-#   Capture Page Screenshot
-#   Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.FrameLayout[3]
-#   Click Element  id=com.vzw.indycar:id/common_spinner_secondary_text
-#   Wait Until Element Is Visible  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[4]/android.widget.TextView
-#   Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[4]/android.widget.TextView
-#   Run Keyword And Return Status  Element Attribute Should Match  id=com.vzw.indycar:id/common_spinner_secondary_text  text  Exclusive News
-#   Wait Until Element Is Visible  com.vzw.indycar:id/media_item_title
-#   Super Swipe
-#   Super Swipe
-#   Wait Until Element Is Visible  id=com.vzw.indycar:id/loadMoreButton
-#   Click Element  id=com.vzw.indycar:id/loadMoreButton
-#   Wait Until Element Is Visible    com.vzw.indycar:id/media_item_title
-#   Click Element    com.vzw.indycar:id/media_item_title
-#   Wait Until Element Is Visible    Share
-#   Swipy1
-#   Capture Page Screenshot
-#
-# Photo Features
-#
-#   Wait Until Element Is Visible  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.FrameLayout[5]
-#   Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.FrameLayout[5]
-#   Category Switch
-#   Wait Until Element Is Visible  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[5]/android.widget.TextView
-#   Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[5]/android.widget.TextView
-#   Run Keyword And Return Status    Element Attribute Should Match  id=com.vzw.indycar:id/common_spinner_secondary_text  text  ${CategoryPhotos}
-#   Super Swipe
-#   Super Swipe
-#   Wait Until Element Is Visible  id=com.vzw.indycar:id/loadMoreButton
-#   Click Element  id=com.vzw.indycar:id/loadMoreButton
-#   Wait Until Element Is Visible  com.vzw.indycar:id/media_item_title
-#   Click Element  com.vzw.indycar:id/media_item_title
-#   Wait Until Element Is Visible    Share
-#   Run Keyword And Return Status  Swipy1
-#   Capture Page Screenshot
-#   Tap  id=com.vzw.indycar:id/photo_thumbnail
-#   Wait Until Element Is Visible  Share
-#   Capture Page Screenshot
-#   Sideswipe
-#   Capture Page Screenshot
-#   Wait Until Element Is Visible  Share
-#   Landscape
-#   Capture Page Screenshot
-#   Wait Until Element Is Visible  Share
-#   Portrait
-#   Capture Page Screenshot
+News Features
+
+  Wait Until Element Is Visible  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.FrameLayout[3]
+  Capture Page Screenshot
+  Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.FrameLayout[3]
+  Click Element  id=com.vzw.indycar:id/common_spinner_secondary_text
+  Wait Until Element Is Visible  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[4]/android.widget.TextView
+  Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[4]/android.widget.TextView
+  Run Keyword And Return Status  Element Attribute Should Match  id=com.vzw.indycar:id/common_spinner_secondary_text  text  Exclusive News
+  Wait Until Element Is Visible  com.vzw.indycar:id/media_item_title
+  Super Swipe2
+  Super Swipe2
+  Wait Until Element Is Visible  id=com.vzw.indycar:id/loadMoreButton
+  Click Element  id=com.vzw.indycar:id/loadMoreButton
+  Wait Until Element Is Visible    com.vzw.indycar:id/media_item_title
+  Click Element    com.vzw.indycar:id/media_item_title
+  Wait Until Element Is Visible    Share
+  Swipy1
+  Capture Page Screenshot
+
+Photo Features
+
+  Wait Until Element Is Visible  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.FrameLayout[5]
+  Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.LinearLayout/android.widget.ExpandableListView/android.widget.FrameLayout[5]
+  Category Switch
+  Wait Until Element Is Visible  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[5]/android.widget.TextView
+  Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[5]/android.widget.TextView
+  Run Keyword And Return Status    Element Attribute Should Match  id=com.vzw.indycar:id/common_spinner_secondary_text  text  ${CategoryPhotos}
+  Super Swipe2
+  Super Swipe2
+  Wait Until Element Is Visible  id=com.vzw.indycar:id/loadMoreButton
+  Click Element  id=com.vzw.indycar:id/loadMoreButton
+  Wait Until Element Is Visible  com.vzw.indycar:id/media_item_title
+  Click Element  com.vzw.indycar:id/media_item_title
+  Wait Until Element Is Visible    Share
+  Run Keyword And Return Status  Swipy2
+  Capture Page Screenshot
+  Tap  id=com.vzw.indycar:id/photo_thumbnail
+  Wait Until Element Is Visible  Share
+  Capture Page Screenshot
+  Sideswipe2
+  Capture Page Screenshot
+  Wait Until Element Is Visible  Share
+  Landscape
+  Capture Page Screenshot
+  Wait Until Element Is Visible  Share
+  Portrait
+  Capture Page Screenshot
 
 # Social Media
 #   #photo
@@ -131,31 +128,117 @@ Social Features
 #   Sleep  60
 #   Close Application
 
-Podcast Features
+# Podcast Features
+#
+#   Open Podcast
+#   Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+#   Click Element  id=com.vzw.indycar:id/podcast_icon
+#   Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[3]/android.widget.LinearLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.FrameLayout/android.widget.ImageView
+#   Click Element  com.vzw.indycar:id/audio_play_button
+#   Click Element  com.vzw.indycar:id/audio_play_button
+#   Click Element  com.vzw.indycar:id/audio_forward_button
+#   Click Element  com.vzw.indycar:id/audio_rewind_button
+#   Click Element  com.vzw.indycar:id/audio_time_seek
+#   Click Element  sound on max
+#   Click Element  sound off
+#   Click Element  Edit
+#   Click Element  com.vzw.indycar:id/podcast_icon
+#   Click Element  Edit
+#   Wait Until Element Is Visible  Edit
+#   Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+#   Click Element  Delete
+#   Wait Until Element Is Visible  id=android:id/button2
+#   Click Element  id=android:id/button2
+#   Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+#   Click Element  Delete
+#   Wait Until Element Is Visible   id=android:id/button1
+#   Click Element  id=android:id/button1
 
-  Open Podcast
-  Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
-  Click Element  id=com.vzw.indycar:id/podcast_icon
-  Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[3]/android.widget.LinearLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.FrameLayout/android.widget.ImageView
-  Click Element  com.vzw.indycar:id/audio_play_button
-  Click Element  com.vzw.indycar:id/audio_play_button
-  Click Element  com.vzw.indycar:id/audio_forward_button
-  Click Element  com.vzw.indycar:id/audio_rewind_button
-  Click Element  com.vzw.indycar:id/audio_time_seek
-  Click Element  sound on max
-  Click Element  sound off
-  Click Element  Edit
-  Click Element  com.vzw.indycar:id/podcast_icon
-  Click Element  Edit
-  Wait Until Element Is Visible  Edit
-  Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
-  Click Element  Delete
-  Wait Until Element Is Visible  id=android:id/button2
-  Click Element  id=android:id/button2
-  Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
-  Click Element  Delete
-  Wait Until Element Is Visible   id=android:id/button1
-  Click Element  id=android:id/button1
+Podcast Play/Switch Podcast
+
+    Open Podcast
+    Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+    Click Element  id=com.vzw.indycar:id/podcast_icon
+    Capture Page Screenshot
+    Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[3]/android.widget.LinearLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.FrameLayout/android.widget.ImageView
+    Capture Page Screenshot
+
+Podcast Play/Switch Podcast Tablet
+
+
+    Open Podcast
+    Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+    Click Element  id=com.vzw.indycar:id/podcast_icon
+    Capture Page Screenshot
+    Click Element  xpath=/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.support.v4.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.ListView/android.widget.LinearLayout[3]/android.widget.FrameLayout/android.widget.ImageView
+    Capture Page Screenshot
+    Close Application
+
+Podcast Seek Bar
+
+    Open Podcast
+    Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+    Click Element  id=com.vzw.indycar:id/podcast_icon
+    Wait Until Element Is Visible  com.vzw.indycar:id/audio_time_seek
+    Click Element  com.vzw.indycar:id/audio_time_seek
+    Capture Page Screenshot
+
+Podcast Pause/Rewind/FF
+
+    Open Podcast
+    Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+    Click Element  id=com.vzw.indycar:id/podcast_icon
+    Wait Until Element Is Visible  com.vzw.indycar:id/audio_play_button
+    Click Element  com.vzw.indycar:id/audio_play_button
+    Wait Until Element Is Visible  com.vzw.indycar:id/audio_play_button
+    Click Element  com.vzw.indycar:id/audio_play_button
+    Click Element  com.vzw.indycar:id/audio_forward_button
+    Capture Page Screenshot
+    Click Element  com.vzw.indycar:id/audio_rewind_button
+    Capture Page Screenshot
+
+Podcast Volume Min/Max
+
+    Open Podcast
+    Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+    Click Element  id=com.vzw.indycar:id/podcast_icon
+    Wait Until Element Is Visible  com.vzw.indycar:id/sound_on_max
+    Click Element  com.vzw.indycar:id/sound_on_max
+    Capture Page Screenshot
+    Click Element  com.vzw.indycar:id/sound_off
+    Capture Page Screenshot
+    Click Element  com.vzw.indycar:id/seekBar
+    Capture Page Screenshot
+
+Podcast Delete Podcast
+
+    Open Podcast
+    Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+    Click Element  Edit
+    Capture Page Screenshot
+    Click Element  com.vzw.indycar:id/podcast_icon
+    Click Element  Edit
+    Wait Until Element Is Visible  Edit
+    Capture Page Screenshot
+
+Podcast Delete Cancel
+
+    Open Podcast
+    Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+    Click Element  Delete
+    Wait Until Element Is Visible  id=android:id/button2
+    Click Element  id=android:id/button2
+    #Page Should Not Contain Text  Cancel
+    Capture Page Screenshot
+
+Podcast Delete All
+
+    Open Podcast
+    Wait Until Element Is Visible  id=com.vzw.indycar:id/podcast_icon
+    Click Element  Delete
+    Wait Until Element Is Visible   id=android:id/button1
+    Click Element  id=android:id/button1
+    Capture Page Screenshot
 
 Schedule Standings
 
@@ -185,98 +268,98 @@ Schedule Standings
   Click Text  Verizon P1 Standings
   Run Keyword And Return Status  Element Attribute Should Match  id=com.vzw.indycar:id/common_spinner_secondary_text  text  Verizon P1 Standings
 
-# Drivers/Teams/101/Fantasy
-#
-#   Open Drivers
-#   Wait Until Element Is Visible  com.vzw.indycar:id/is_favorite
-#   Click Element  com.vzw.indycar:id/is_favorite
-#   Capture Page Screenshot
-#   Wait Until Element Is Visible    com.vzw.indycar:id/drivers_and_teams_favorite_list_header
-#   Click Element  com.vzw.indycar:id/drivers_and_teams_favorite_item
-#   Wait Until Element Is Visible   com.vzw.indycar:id/driver_is_favorite
-#   Capture Page Screenshot
-#   Go Back
-#   Open Teams
-#   Wait Until Element Is Visible  com.vzw.indycar:id/is_favorite
-#   Click Element  com.vzw.indycar:id/is_favorite
-#   Capture Page Screenshot
-#   Wait Until Element Is Visible    com.vzw.indycar:id/drivers_and_teams_favorite_list_header
-#   Click Element  com.vzw.indycar:id/drivers_and_teams_favorite_item
-#   Wait Until Element Is Visible   com.vzw.indycar:id/team_name
-#   Capture Page Screenshot
-#   Go Back
-#   Open101
-#   Sleep    3
-#   Click Text    Overview
-#   Capture Page Screenshot
-#   Go Back
-#   Open Fantasy
-#
-# Settings Main
-#
-#   Open Settings3
-#   Sleep    2
-#   Click Text  Notifications
-#   Sleep  3
-#   Click Element  	com.vzw.indycar:id/notification_value
-#   Capture Page Screenshot
-#   Click Element  Navigate up
-#   Sleep  3
-#   Click Text  Notifications
-#   Capture Page Screenshot
-#   Sleep  3
-#   Click Element  Navigate up
-#   Sleep  3
-#   Click Text  INDYCAR Nation
-#   Sleep  3
-#   Click Element  com.vzw.indycar:id/personalization_include_email
-#   Sleep  3
-#   Input Text  id=com.vzw.indycar:id/personalization_email  Test Email
-#   Sleep  2
-#   Capture Page Screenshot
-#   Click Element  Navigate up
-#   Sleep  3
-#   Click Text  Recommend to a Friend
-#   Sleep  3
-#   Capture Page Screenshot
-#   Click Element  Navigate up
-#
-# Settings Rate Us/ Feedback No/Dismiss
-#
-#    Open Settings3
-#    Sleep  3
-#    Click Text  Rate Us / Feedback
-#    Wait Until Element Is Visible    android:id/button2
-#    Click Element  android:id/button2
-#    Sleep  5
-#    Capture Page Screenshot
-#    Click Element  Navigate up
-#    Sleep    3
-#    Click Text  Rate Us / Feedback
-#    Wait Until Element Is Visible    android:id/button2
-#    Click Element  android:id/button3
-#
-# Settings Rate Us/ Feedback No Thanks
-#
-#   Open Settings3
-#   Wait Until Page Contains    Rate Us / Feedback
-#   Click Text  Rate Us / Feedback
-#   Wait Until Element Is Visible  android:id/button1
-#   Click Element  android:id/button1
-#   Sleep  2
-#   Click Text  NO, THANKS
-#   Sleep  2
-#
-# Settings Google Play
-#
-#   Open Settings3
-#   Wait Until Page Contains    Rate Us / Feedback
-#   Click Text  Rate Us / Feedback
-#   Wait Until Element Is Visible  android:id/button1
-#   Click Element  android:id/button1
-#   Sleep  2
-#   Click Text  RATE IT NOW
-#   Wait Until Page Contains    UNINSTALL
+Drivers/Teams/101/Fantasy
+
+  Open DriversOld
+  Wait Until Element Is Visible  com.vzw.indycar:id/is_favorite
+  Click Element  com.vzw.indycar:id/is_favorite
+  Capture Page Screenshot
+  Wait Until Element Is Visible    com.vzw.indycar:id/drivers_and_teams_favorite_list_header
+  Click Element  com.vzw.indycar:id/drivers_and_teams_favorite_item
+  Wait Until Element Is Visible   com.vzw.indycar:id/driver_is_favorite
+  Capture Page Screenshot
+  Go Back
+  Open TeamsOld
+  Wait Until Element Is Visible  com.vzw.indycar:id/is_favorite
+  Click Element  com.vzw.indycar:id/is_favorite
+  Capture Page Screenshot
+  Wait Until Element Is Visible    com.vzw.indycar:id/drivers_and_teams_favorite_list_header
+  Click Element  com.vzw.indycar:id/drivers_and_teams_favorite_item
+  Wait Until Element Is Visible   com.vzw.indycar:id/team_name
+  Capture Page Screenshot
+  Go Back
+  Open101
+  Sleep    3
+  Click Text    Overview
+  Capture Page Screenshot
+  Go Back
+  Open Fantasy
+
+Settings Main
+
+  Open SettingsOld
+  Sleep    2
+  Click Text  Notifications
+  Sleep  3
+  Click Element  	com.vzw.indycar:id/notification_value
+  Capture Page Screenshot
+  Click Element  Navigate up
+  Sleep  3
+  Click Text  Notifications
+  Capture Page Screenshot
+  Sleep  3
+  Click Element  Navigate up
+  Sleep  3
+  Click Text  INDYCAR Nation
+  Sleep  3
+  Click Element  com.vzw.indycar:id/personalization_include_email
+  Sleep  3
+  Input Text  id=com.vzw.indycar:id/personalization_email  Test Email
+  Sleep  2
+  Capture Page Screenshot
+  Click Element  Navigate up
+  Sleep  3
+  Click Text  Recommend to a Friend
+  Sleep  3
+  Capture Page Screenshot
+  Click Element  Navigate up
+
+Settings Rate Us/ Feedback No/Dismiss
+
+   Open SettingsOld
+   Sleep  3
+   Click Text  Rate Us / Feedback
+   Wait Until Element Is Visible    android:id/button2
+   Click Element  android:id/button2
+   Sleep  5
+   Capture Page Screenshot
+   Click Element  Navigate up
+   Sleep    3
+   Click Text  Rate Us / Feedback
+   Wait Until Element Is Visible    android:id/button2
+   Click Element  android:id/button3
+
+Settings Rate Us/ Feedback No Thanks
+
+  Open SettingsOld
+  Wait Until Page Contains    Rate Us / Feedback
+  Click Text  Rate Us / Feedback
+  Wait Until Element Is Visible  android:id/button1
+  Click Element  android:id/button1
+  Sleep  2
+  Click Text  NO, THANKS
+  Sleep  2
+
+Settings Google Play
+
+  Open SettingsOld
+  Wait Until Page Contains    Rate Us / Feedback
+  Click Text  Rate Us / Feedback
+  Wait Until Element Is Visible  android:id/button1
+  Click Element  android:id/button1
+  Sleep  2
+  Click Text  RATE IT NOW
+  Wait Until Page Contains    UNINSTALL
 
 
 
@@ -303,11 +386,24 @@ Sideswipe
     Wait Until Element Is Visible  Share
     Swipe  65  1029  981  1040
 
+#Old Samsung Phones
+Sideswipe2
+    Swipe  642  685  56  724
+    Wait Until Element Is Visible  Share
+    Swipe  75  726  607  714
+
 #Most Phones
 Swipy1
     Swipe    522    1690    498    270
     Sleep    5
     Swipe    498  270  522  1690
+
+    #Old Samsung, tablets small
+Swipy2
+
+    Swipe  387  1167  373  767
+    Sleep    5
+    Swipe  380  388  366  795
 
 Super Swipe
 
@@ -319,6 +415,17 @@ Super Swipe
     Swipe  519  1498  523  209
     Swipe  519  1498  523  209
     Swipe  519  1498  523  209
+
+#Old Samsung Phones
+Super Swipe2
+    Swipe  367  1120  365  504
+    Swipe  367  1120  365  504
+    Swipe  367  1120  365  504
+    Swipe  367  1120  365  504
+    Swipe  367  1120  365  504
+    Swipe  367  1120  365  504
+    Swipe  367  1120  365  504
+    Swipe  367  1120  365  504
 
 Open Navigation
 
@@ -355,6 +462,24 @@ Open Drivers
     Wait Until Page Contains  Drivers
     Click Text  Drivers
 
+    #Old Samsung
+Open DriversOld
+
+    Sleep    3
+    Wait Until Page Contains    Videos
+    Swipe  279  1151   307  723
+    Wait Until Page Contains  Drivers
+    Click Text  Drivers
+
+    #Tablets
+Open DriversTab
+
+    Sleep    3
+    Wait Until Page Contains    Videos
+    Wait Until Page Contains  Drivers
+    Click Text  Drivers
+
+
 Open Teams
 
     Wait Until Element Is Visible  Open
@@ -364,12 +489,54 @@ Open Teams
     Wait Until Page Contains  Teams
     Click Text  Teams
 
+    #Old Phones
+Open TeamsOld
+
+    Wait Until Element Is Visible  Open
+    Click Element  Open
+    Sleep    3
+    Wait Until Page Contains    Videos
+    Swipe  279  1151   307  723
+    Wait Until Page Contains  Teams
+    Click Text  Teams
+
+#Tablets
+Open TeamsTab
+
+    Wait Until Element Is Visible  Open
+    Click Element  Open
+    Sleep    3
+    Wait Until Page Contains    Videos
+    Swipe  279  1151   307  723
+    Wait Until Page Contains  Teams
+    Click Text  Teams
+
 Open 101
 
     Wait Until Element Is Visible  Open
     Click Element  Open
     Wait Until Page Contains    Drivers
     Swipe  397  1624  352  649
+    Wait Until Page Contains  INDYCAR 101
+    Click Text  INDYCAR 101
+
+#Tablets
+Open 101Tab
+
+    Wait Until Element Is Visible  Open
+    Click Element  Open
+    Wait Until Page Contains    Videos
+    Swipe  278  1293  279  745
+    Wait Until Page Contains  INDYCAR 101
+    Click Text  INDYCAR 101
+
+#Old Phones
+Open101Old
+
+    Wait Until Element Is Visible  Open
+    Click Element  Open
+    Wait Until Page Contains    Videos
+    Swipe  326  1077  265  551
     Wait Until Page Contains  INDYCAR 101
     Click Text  INDYCAR 101
 
@@ -384,8 +551,30 @@ Open Fantasy
     Sleep    3
     Capture Page Screenshot
 
-Open Settings
+#Tablets
+Open FantasyTab
+    Wait Until Element Is Visible  Open
+    Click Element  Open
+    Wait Until Page Contains    Videos
+    Swipe  278  1293  279  745
+    Wait Until Page Contains  Fantasy Challenge
+    Click Text  Fantasy Challenge
+    Sleep    3
+    Capture Page Screenshot
 
+#Old Phones
+Open FantasyOld
+
+    Wait Until Element Is Visible  Open
+    Click Element  Open
+    Wait Until Page Contains    Videos
+    Swipe  326  1077  265  551
+    Wait Until Page Contains  Fantasy Challenge
+    Click Text  Fantasy Challenge
+    Sleep    3
+    Capture Page Screenshot
+
+Open Settings
 
     Sleep  3
     Swipe  397  1624  352  649
@@ -394,12 +583,24 @@ Open Settings
     Sleep    3
     Capture Page Screenshot
 
-Open Settings3
-
+#Old Phones
+Open SettingsOld
 
     Wait Until Page Contains    Videos
     Swipe  326  1077  265  551
     Swipe  326  1077  265  551
+    Wait Until Page Contains  Settings
+    Click Text  Settings
+    Sleep    3
+    Capture Page Screenshot
+
+#Tablets
+Open SettingsTab
+
+    Wait Until Element Is Visible  Open
+    Click Element  Open
+    Wait Until Page Contains    Videos
+    Swipe  278  1293  279  745
     Wait Until Page Contains  Settings
     Click Text  Settings
     Sleep    3
